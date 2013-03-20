@@ -3,14 +3,19 @@
 	$(document).ready(function() {
 	
 		$('#calendar').fullCalendar({
-      
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},      
       events : [
   
       <% @bookable.events.each do |event| %>
       {
-        title : '<%= "#{event[:start].strftime("%-I:%M%p")} - #{event[:end].strftime("%-I:%M%p")}" %>', 
-        start : '<%= event[:start] %>',
-        end : '<%= event[:end] %>'
+        title : '', 
+        start : '<%= event[:start].strftime("%F %H:%M:%S") %>',
+        end : '<%= event[:end].strftime("%F %H:%M:%S") %>',
+        allDay: false
       },
       <% end %>
       ]
