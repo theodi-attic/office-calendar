@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320113412) do
+ActiveRecord::Schema.define(:version => 20130320122456) do
 
   create_table "bookables", :force => true do |t|
     t.text     "name"
-    t.text     "calendar_url"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.text     "calendar_xml"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.text     "calendar_ical"
   end
 
 end
