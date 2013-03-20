@@ -15,7 +15,7 @@
         title : '', 
         start : '<%= event[:start].strftime("%F %H:%M:%S") %>',
         end : '<%= event[:end].strftime("%F %H:%M:%S") %>',
-        allDay: false
+        allDay: <%= event[:allday].to_s %>
       },
       <% end %>
       ]

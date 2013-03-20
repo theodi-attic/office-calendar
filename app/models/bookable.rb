@@ -11,12 +11,13 @@ class Bookable < ActiveRecord::Base
     ical = open(calendar_ical)
     
     Icalendar.parse(ical).first.freebusys.each do |item|
-      event    = {
-        :start => item.dtstart,
-        :end   => item.dtend
+      event     = {
+        :start  => item.dtstart,
+        :end    => item.dtend,
+        :allday => item.dtstart.class == DateTime ? false : true
       }
       
-      events.push(event)
+      events << event
     end
     
     return events
