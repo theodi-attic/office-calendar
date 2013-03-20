@@ -12,6 +12,7 @@ class Bookable < ActiveRecord::Base
     
     Icalendar.parse(ical).first.freebusys.each do |item|
       event     = {
+        :title  => item.dtstart.class == DateTime ? "#{item.dtstart.strftime('%l:%M%P')} - #{item.dtend.strftime('%l:%M%P')}" : "All day",
         :start  => item.dtstart,
         :end    => item.dtend,
         :allday => item.dtstart.class == DateTime ? false : true

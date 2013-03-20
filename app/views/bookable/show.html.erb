@@ -12,13 +12,14 @@ $(document).ready(function() {
 
                       <% @bookable.events.each do |event| %>
                       {
-                        title : '', 
+                        title : '<%= event[:title] %>', 
                         start : '<%= event[:start].strftime("%F %H:%M:%S") %>',
                         end : '<%= event[:end].strftime("%F %H:%M:%S") %>',
                         allDay: <%= event[:allday].to_s %>
                       },
                       <% end %>
-                      ]
+                      ],
+    timeFormat: ''
 		
 	});
 	
