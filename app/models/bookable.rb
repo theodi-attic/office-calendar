@@ -1,11 +1,8 @@
 class Bookable < ActiveRecord::Base
-  require 'icalendar'
   
   attr_accessible :name, :calendar_xml, :calendar_ical
   
-  def events
-    require 'open-uri'
-    
+  def events    
     events = []
     
     ical = open(calendar_ical)
