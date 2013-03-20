@@ -3,8 +3,7 @@ class Bookable < ActiveRecord::Base
   attr_accessible :name, :calendar_xml, :calendar_ical
   
   def events    
-    events = []
-    
+    events = []    
     ical = open(calendar_ical)
     
     Icalendar.parse(ical).first.freebusys.each do |item|
@@ -13,8 +12,7 @@ class Bookable < ActiveRecord::Base
         :start  => item.dtstart,
         :end    => item.dtstart.class == DateTime ? item.dtend : item.dtstart,
         :allday => item.dtstart.class == DateTime ? false : true
-      }
-      
+      }     
       events << event
     end
     
