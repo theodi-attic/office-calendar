@@ -3,22 +3,17 @@
 	$(document).ready(function() {
 	
 		$('#calendar').fullCalendar({
-		
-			events: '<%= @bookable.calendar_xml %>',
-			
-			eventClick: function(event) {
-				// opens events in a popup window
-				window.open(event.url, 'gcalevent', 'width=700,height=600');
-				return false;
-			},
-			
-			loading: function(bool) {
-				if (bool) {
-					$('#loading').show();
-				}else{
-					$('#loading').hide();
-				}
-			}
+      
+      events : [
+  
+      <% @bookable.events.each do |event| %>
+      {
+        title : '<%= "#{event[:start].strftime("%-I:%M%p")} - #{event[:end].strftime("%-I:%M%p")}" %>', 
+        start : '<%= event[:start] %>',
+        end : '<%= event[:end] %>'
+      },
+      <% end %>
+      ]
 			
 		});
 		

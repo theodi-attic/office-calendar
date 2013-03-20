@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 gem 'fullcalendar-rails', :git => 'git://github.com/theodi/fullcalendar-rails.git'
 gem 'less-rails-bootstrap', :git => 'git://github.com/theodi/less-rails-bootstrap.git'
+gem 'icalendar'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
