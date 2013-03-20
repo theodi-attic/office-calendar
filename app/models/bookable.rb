@@ -14,7 +14,7 @@ class Bookable < ActiveRecord::Base
       event     = {
         :title  => item.dtstart.class == DateTime ? "#{item.dtstart.strftime('%l:%M%P')} - #{item.dtend.strftime('%l:%M%P')}" : "All day",
         :start  => item.dtstart,
-        :end    => item.dtend,
+        :end    => item.dtstart.class == DateTime ? item.dtend : item.dtstart,
         :allday => item.dtstart.class == DateTime ? false : true
       }
       
