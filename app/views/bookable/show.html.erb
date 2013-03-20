@@ -1,1 +1,33 @@
+<script>
+
+	$(document).ready(function() {
+	
+		$('#calendar').fullCalendar({
+		
+			// US Holidays
+			events: '<%= @bookable.calendar_url %>',
+			
+			eventClick: function(event) {
+				// opens events in a popup window
+				window.open(event.url, 'gcalevent', 'width=700,height=600');
+				return false;
+			},
+			
+			loading: function(bool) {
+				if (bool) {
+					$('#loading').show();
+				}else{
+					$('#loading').hide();
+				}
+			}
+			
+		});
+		
+	});
+
+</script>
+
 <h2><%= @bookable.name %></h2>
+
+<div id='loading' style='display:none'>loading...</div>
+<div id='calendar'></div>
