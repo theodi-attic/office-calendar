@@ -1,0 +1,5 @@
+<ul>
+<% @bookables.each do |bookable| %>
+  <li><%= link_to(bookable.name, bookable) %></li>
+<% end %>
+</ul>
