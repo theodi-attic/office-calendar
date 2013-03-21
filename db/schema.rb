@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321171441) do
+ActiveRecord::Schema.define(:version => 20130321183349) do
 
   create_table "resources", :force => true do |t|
     t.text     "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20130321171441) do
     t.text     "google_id"
     t.text     "email"
     t.text     "description"
-    t.text     "type"
+    t.text     "resourcetype"
   end
 
 end

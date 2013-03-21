@@ -1,6 +1,6 @@
 class Resource < ActiveRecord::Base
   
-  attr_accessible :name, :calendar_xml, :calendar_ical
+  attr_accessible :name, :calendar_xml, :calendar_ical, :email, :description, :type, :resourcetype
   
   def events    
     events = []    
