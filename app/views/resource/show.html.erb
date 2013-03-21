@@ -29,6 +29,8 @@ $(document).ready(function() {
 
 <h2><%= @resource.name %></h2>
 
+<p><%= @resource.description %></p>
+
 <div id="feeds">
   <a href="<%= @resource.calendar_xml %>" class="label label-xml">XML</a>
   <a href="<%= @resource.calendar_ical %>" class="label label-ical">ICAL</a>
