@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class BookableHelperTest < ActionView::TestCase
+class resourceHelperTest < ActionView::TestCase
 end

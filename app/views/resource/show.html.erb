@@ -10,7 +10,7 @@ $(document).ready(function() {
 		},      
                       events : [
 
-                      <% @bookable.events.each do |event| %>
+                      <% @resource.events.each do |event| %>
                       {
                         title : '<%= event[:title] %>', 
                         start : '<%= event[:start].strftime("%F %H:%M:%S") %>',
@@ -27,11 +27,11 @@ $(document).ready(function() {
 
 </script>
 
-<h2><%= @bookable.name %></h2>
+<h2><%= @resource.name %></h2>
 
 <div id="feeds">
-  <a href="<%= @bookable.calendar_xml %>" class="label label-xml">XML</a>
-  <a href="<%= @bookable.calendar_ical %>" class="label label-ical">ICAL</a>
+  <a href="<%= @resource.calendar_xml %>" class="label label-xml">XML</a>
+  <a href="<%= @resource.calendar_ical %>" class="label label-ical">ICAL</a>
 </div>
 
 <div id='loading' style='display:none'>loading...</div>

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BookableControllerTest < ActionController::TestCase
+class resourceControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
