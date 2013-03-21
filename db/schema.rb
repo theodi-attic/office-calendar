@@ -11,14 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321183349) do
+ActiveRecord::Schema.define(:version => 20130321185527) do
 
   create_table "resources", :force => true do |t|
     t.text     "name"
-    t.text     "calendar_xml"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.text     "calendar_ical"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.text     "google_id"
     t.text     "email"
     t.text     "description"
