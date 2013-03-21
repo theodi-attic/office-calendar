@@ -1,5 +1,8 @@
-<ul>
-<% @resources.each do |resource| %>
-  <li><%= link_to(resource.name, resource) %></li>
+<% @resources.each do |type, resource| %>
+  <h2><%= type.titleize.pluralize %></h2>
+  <ul>
+  <% resource.each do |res| %>
+    <li><%= link_to(res.name, res) %></li>
+  <% end %>
+  </ul>
 <% end %>
-</ul>
