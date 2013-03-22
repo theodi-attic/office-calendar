@@ -2,6 +2,7 @@ class GCalResources
   require 'rubygems'
   require 'httparty'
   require 'nokogiri'
+  require 'google/api_client'
 
   def self.get_resources
     token = get_auth_token
@@ -21,6 +22,17 @@ class GCalResources
     end
     
     return resources
+  end
+  
+  def self.get_oauth_token
+      path = Rails.root.join("#{ENV['GAPPS_PUBLIC_KEY_FINGERPRINT']}-privatekey.p12")
+    
+      key = Google::APIClient::PKCS12.load_key(path, 'notasecret')
+      asserter = Google::APIClient::JWTAsserter.new(ENV['GAPPS_SERVICE_ACCOUNT_EMAIL'],
+          'https://www.googleapis.com/auth/calendar http://www.google.com/calendar/feeds/', key)
+      client = Google::APIClient.new
+      client.authorization = asserter.authorize(ENV['GAPPS_USER_EMAIL'])
+      client.authorization.access_token
   end
   
   def self.get_auth_token

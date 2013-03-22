@@ -3,28 +3,37 @@ class Resource < ActiveRecord::Base
   attr_accessible :name, :email, :description, :type, :resourcetype
   
   def calendar_xml
-    "http://www.google.com/calendar/feeds/#{URI::escape(email)}/public/basic"
+    "http://www.google.com/calendar/feeds/#{URI::escape(email)}/private/basic"
   end
   
   def calendar_ical
-    "http://www.google.com/calendar/ical/#{URI::escape(email)}/public/basic.ics"
+    "http://www.google.com/calendar/ical/#{URI::escape(email)}/private/basic.ics"
   end
   
   def events    
-    events = []    
-    ical = open(calendar_ical)
+    token = GCalResources.get_oauth_token
     
-    Icalendar.parse(ical).first.freebusys.each do |item|
-      event     = {
-        :title  => item.dtstart.class == DateTime ? "#{item.dtstart.strftime('%l:%M%P')} - #{item.dtend.strftime('%l:%M%P')}" : "All day",
-        :start  => item.dtstart,
-        :end    => item.dtstart.class == DateTime ? item.dtend : item.dtstart,
-        :allday => item.dtstart.class == DateTime ? false : true
-      }     
-      events << event
+    events = []
+    json = JSON.parse HTTParty.get("https://www.googleapis.com/calendar/v3/calendars/#{email}/events?timeZone=Europe%2FLondon", :headers => { "Authorization" => "OAuth #{token}"}).response.body
+    
+    json["items"].each do |item|
+      unless item['start'].nil?
+        puts item
+        events << {
+          :title  => item['end']['dateTime'].nil? ? "All Day Event" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
+          :start  => DateTime.parse(item['start'].flatten[1]),
+          :end    => item['end']['dateTime'].nil? ? DateTime.parse(item['start'].flatten[1]) : DateTime.parse(item['end'].flatten[1]),
+          :allday => item['end']['dateTime'].nil? ? true : false       
+        }
+      end
     end
-      
+    
     return events
   end
+  
+  def parse_time(datetime)
+    DateTime.parse(datetime).strftime('%l:%M%P').strip
+  end
+
   
 end

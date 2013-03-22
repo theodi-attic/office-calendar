@@ -16,6 +16,7 @@ gem 'nokogiri'
 gem 'resque'
 gem 'resque-scheduler', :require => 'resque_scheduler'
 gem 'thin'
+gem 'google-api-client'
 
 # Gems used only for assets and not required
 # in production environments by default.
