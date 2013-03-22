@@ -14,7 +14,8 @@ gem 'icalendar'
 gem 'httparty'
 gem 'nokogiri'
 gem 'resque'
-gem 'resque-scheduler'
+gem 'resque-scheduler', :require => 'resque_scheduler'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
