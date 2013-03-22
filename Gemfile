@@ -13,6 +13,8 @@ gem 'less-rails-bootstrap', :git => 'git://github.com/theodi/less-rails-bootstra
 gem 'icalendar'
 gem 'httparty'
 gem 'nokogiri'
+gem 'resque'
+gem 'resque-scheduler'
 
 # Gems used only for assets and not required
 # in production environments by default.
