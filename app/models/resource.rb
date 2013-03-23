@@ -20,9 +20,9 @@ class Resource < ActiveRecord::Base
       unless item['start'].nil?
         puts item
         events << {
-          :title  => item['end']['dateTime'].nil? ? "All Day Event" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
+          :title  => item['end']['dateTime'].nil? ? "All Day" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
           :start  => DateTime.parse(item['start'].flatten[1]),
-          :end    => item['end']['dateTime'].nil? ? DateTime.parse(item['start'].flatten[1]) : DateTime.parse(item['end'].flatten[1]),
+          :end    => item['end']['dateTime'].nil? ? DateTime.parse(item['end'].flatten[1]) - 1.minute : DateTime.parse(item['end'].flatten[1]),
           :allday => item['end']['dateTime'].nil? ? true : false       
         }
       end
