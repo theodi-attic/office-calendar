@@ -18,7 +18,6 @@ class Resource < ActiveRecord::Base
     
     json["items"].each do |item|
       unless item['start'].nil?
-        puts item
         events << {
           :title  => item['end']['dateTime'].nil? ? "All Day" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
           :start  => DateTime.parse(item['start'].flatten[1]),
