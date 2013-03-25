@@ -61,5 +61,15 @@ module OfficeCalendar
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    config.action_controller.perform_caching = true
+
+    config.cache_store = :redis_store, "redis://#{ENV['RESQUE_REDIS_HOST']}/0/cache"
+
+    config.action_dispatch.rack_cache = {
+      metastore:   "redis://localhost:6379/1/metastore",
+      entitystore: "redis://localhost:6379/1/entitystore"
+    }
+    
   end
 end

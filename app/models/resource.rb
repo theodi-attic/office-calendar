@@ -11,7 +11,9 @@ class Resource < ActiveRecord::Base
   end
   
   def events
-    GCalResources.get_events(email)
+    Rails.cache.fetch("gcal_events/#{email}", :expires_in => 1.hour) do
+      GCalResources.get_events(email)
+    end
   end
   
 end
