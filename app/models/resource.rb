@@ -1,6 +1,6 @@
 class Resource < ActiveRecord::Base
   
-  attr_accessible :name, :email, :description, :type, :resourcetype
+  attr_accessible :name, :email, :description, :type, :resourcetype, :active
   
   def calendar_xml
     "http://www.google.com/calendar/feeds/#{URI::escape(email)}/private/basic"
