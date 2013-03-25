@@ -51,7 +51,7 @@ class GCalResources
     
       key = Google::APIClient::PKCS12.load_key(path, 'notasecret')
       asserter = Google::APIClient::JWTAsserter.new(ENV['GAPPS_SERVICE_ACCOUNT_EMAIL'],
-          'https://www.googleapis.com/auth/calendar http://www.google.com/calendar/feeds/', key)
+          'https://www.googleapis.com/auth/calendar http://www.google.com/calendar/feeds/ https://apps-apis.google.com/a/feeds/calendar/resource/', key)
       client = Google::APIClient.new
       client.authorization = asserter.authorize(ENV['GAPPS_USER_EMAIL'])
       client.authorization.access_token
@@ -60,14 +60,14 @@ class GCalResources
   def self.get_auth_token
     post = {
       'accountType' => 'HOSTED_OR_GOOGLE',
-      'Email' => ENV['GAPPS_EMAIL'],
+      'Email' => ENV['GAPPS_USER_EMAIL'],
       'Passwd' => ENV['GAPPS_PASSWORD'],
       'service' => 'apps',
       'source' => 'odi-officecalendar-0.1'
     }
   
     response = self.post('https://www.google.com/accounts/ClientLogin', :body => post)
-  
+      
     if response.header.code.to_i == 200
       response.body.lines.each do |line|
         if line.chomp.index('Auth=')
@@ -94,10 +94,18 @@ class ImportResources
         :name         => res[:name], 
         :email        => res[:email], 
         :description  => res[:description], 
-        :resourcetype => res[:type]
+        :resourcetype => res[:type],
+        :active       => true
       )
-      puts resource.inspect
-    end  
-       
+      resource.touch  
+    end
+    
+    last_updated = DateTime.parse(Resource.order("updated_at desc").limit(1).first.updated_at.to_s)
+    
+    Resource.where("updated_at < ?", last_updated).each do |resource|
+      resource.update_attributes(
+        :active => false
+      )
+    end
   end
 end
