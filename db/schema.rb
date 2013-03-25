@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321185527) do
+ActiveRecord::Schema.define(:version => 20130325122559) do
 
   create_table "resources", :force => true do |t|
     t.text     "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130321185527) do
     t.text     "email"
     t.text     "description"
     t.text     "resourcetype"
+    t.boolean  "active"
   end
 
 end
