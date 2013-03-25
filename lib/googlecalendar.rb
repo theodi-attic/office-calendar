@@ -3,11 +3,13 @@ class GCalResources
   require 'httparty'
   require 'nokogiri'
   require 'google/api_client'
+  
+  include HTTParty
 
   def self.get_resources
     token = get_auth_token
   
-    doc = Nokogiri::XML HTTParty.get("https://apps-apis.google.com/a/feeds/calendar/resource/2.0/theodi.org/", :headers => { "Authorization" => "GoogleLogin auth=#{token}", "Content-type" => "application/atom+xml"}).response.body
+    doc = Nokogiri::XML self.get("https://apps-apis.google.com/a/feeds/calendar/resource/2.0/theodi.org/", :headers => { "Authorization" => "GoogleLogin auth=#{token}", "Content-type" => "application/atom+xml"}).response.body
 
     resources = []
 
@@ -22,6 +24,26 @@ class GCalResources
     end
     
     return resources
+  end
+  
+  def self.get_events(email)
+    token = get_oauth_token
+    
+    events = []
+    json = JSON.parse self.get("https://www.googleapis.com/calendar/v3/calendars/#{email}/events?timeZone=Europe%2FLondon", :headers => { "Authorization" => "OAuth #{token}"}).response.body
+    
+    json["items"].each do |item|
+      unless item['start'].nil? 
+        events << {
+          :title  => item['end']['dateTime'].nil? ? "All Day" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
+          :start  => DateTime.parse(item['start'].flatten[1]),
+          :end    => item['end']['dateTime'].nil? ? DateTime.parse(item['end'].flatten[1]) - 1.minute : DateTime.parse(item['end'].flatten[1]),
+          :allday => item['end']['dateTime'].nil? ? true : false       
+        }
+      end
+    end
+    
+    return events
   end
   
   def self.get_oauth_token
@@ -44,7 +66,7 @@ class GCalResources
       'source' => 'odi-officecalendar-0.1'
     }
   
-    response = HTTParty.post('https://www.google.com/accounts/ClientLogin', :body => post)
+    response = self.post('https://www.google.com/accounts/ClientLogin', :body => post)
   
     if response.header.code.to_i == 200
       response.body.lines.each do |line|
@@ -54,6 +76,11 @@ class GCalResources
       end
     end
   end
+  
+  def self.parse_time(datetime)
+    DateTime.parse(datetime).strftime('%l:%M%P').strip
+  end
+
 end
 
 class ImportResources
