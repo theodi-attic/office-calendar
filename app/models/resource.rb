@@ -8,4 +8,21 @@ class Resource < ActiveRecord::Base
     end
   end
   
+  def ical
+    event = self.events
+    es = []
+    events.each do |event|
+      e               = Icalendar::Event.new
+      e.uid           = event[:id]   
+      e.dtstart       = event[:start]    
+      e.dtend         = event[:end] 
+      e.summary       = "Room booking for #{event[:title]}" 
+      e.location      = self.name  
+      e.created       = event[:created]
+      e.last_modified = event[:updated]
+      es << e
+    end
+    es
+  end
+  
 end
