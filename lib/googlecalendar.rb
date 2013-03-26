@@ -40,7 +40,7 @@ class GCalResources
           :start   => DateTime.parse(item['start'].flatten[1]),
           :end     => item['end']['dateTime'].nil? ? DateTime.parse(item['end'].flatten[1]) - 1.minute : DateTime.parse(item['end'].flatten[1]),
           :allday  => item['end']['dateTime'].nil? ? true : false,    
-          :created => DateTime.parse(item['created'])  
+          :created => DateTime.parse(item['created']),
           :updated => DateTime.parse(item['updated']) 
         }
       end
