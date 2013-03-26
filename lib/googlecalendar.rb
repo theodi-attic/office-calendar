@@ -35,12 +35,13 @@ class GCalResources
     json["items"].each do |item|
       unless item['start'].nil? 
         events << {
-          :id     => item['id'],
-          :title  => item['end']['dateTime'].nil? ? "All Day" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
-          :start  => DateTime.parse(item['start'].flatten[1]),
-          :end    => item['end']['dateTime'].nil? ? DateTime.parse(item['end'].flatten[1]) - 1.minute : DateTime.parse(item['end'].flatten[1]),
-          :allday => item['end']['dateTime'].nil? ? true : false,    
+          :id      => item['id'],
+          :title   => item['end']['dateTime'].nil? ? "All Day" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
+          :start   => DateTime.parse(item['start'].flatten[1]),
+          :end     => item['end']['dateTime'].nil? ? DateTime.parse(item['end'].flatten[1]) - 1.minute : DateTime.parse(item['end'].flatten[1]),
+          :allday  => item['end']['dateTime'].nil? ? true : false,    
           :created => DateTime.parse(item['created'])  
+          :updated => DateTime.parse(item['updated']) 
         }
       end
     end
