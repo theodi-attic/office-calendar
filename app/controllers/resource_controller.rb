@@ -4,7 +4,7 @@ class ResourceController < ApplicationController
     respond_to do |format|
       format.html { @resources = @resources.group_by { |res| res.resourcetype } }
       format.json
-      format.ics
+      format.ics { @calendar = Icalendar::Calendar.new }
     end
   end
   
@@ -13,7 +13,7 @@ class ResourceController < ApplicationController
     respond_to do |format|
       format.html
       format.json
-      format.ics
+      format.ics { @calendar = Icalendar::Calendar.new }
     end
   end
 end
