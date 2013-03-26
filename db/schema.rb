@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130325122559) do
+ActiveRecord::Schema.define(:version => 20130326104230) do
 
   create_table "resources", :force => true do |t|
     t.text     "name"
@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(:version => 20130325122559) do
     t.text     "description"
     t.text     "resourcetype"
     t.boolean  "active"
+    t.string   "slug"
   end
+
+  add_index "resources", ["slug"], :name => "index_resources_on_slug", :unique => true
 
 end

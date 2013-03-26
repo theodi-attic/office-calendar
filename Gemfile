@@ -19,6 +19,7 @@ gem 'thin'
 gem 'google-api-client'
 gem 'redis-rails'
 gem 'jbuilder'
+gem 'friendly_id', '~> 4.0.9'
 
 # Gems used only for assets and not required
 # in production environments by default.
