@@ -35,10 +35,12 @@ class GCalResources
     json["items"].each do |item|
       unless item['start'].nil? 
         events << {
+          :id     => item['id'],
           :title  => item['end']['dateTime'].nil? ? "All Day" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
           :start  => DateTime.parse(item['start'].flatten[1]),
           :end    => item['end']['dateTime'].nil? ? DateTime.parse(item['end'].flatten[1]) - 1.minute : DateTime.parse(item['end'].flatten[1]),
-          :allday => item['end']['dateTime'].nil? ? true : false       
+          :allday => item['end']['dateTime'].nil? ? true : false,    
+          :created => DateTime.parse(item['created'])  
         }
       end
     end
@@ -49,9 +51,9 @@ class GCalResources
   def self.get_oauth_token
       path = Rails.root.join("#{ENV['GAPPS_PUBLIC_KEY_FINGERPRINT']}-privatekey.p12")
     
-      key = Google::APIClient::PKCS12.load_key(path, 'notasecret')
+      key = Google::APIClient::PKCS12.load_key(path, 'notasecret')      
       asserter = Google::APIClient::JWTAsserter.new(ENV['GAPPS_SERVICE_ACCOUNT_EMAIL'],
-          'https://www.googleapis.com/auth/calendar http://www.google.com/calendar/feeds/ https://apps-apis.google.com/a/feeds/calendar/resource/', key)
+          'https://www.googleapis.com/auth/calendar http://www.google.com/calendar/feeds/', key)
       client = Google::APIClient.new
       client.authorization = asserter.authorize(ENV['GAPPS_USER_EMAIL'])
       client.authorization.access_token
