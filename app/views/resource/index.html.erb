@@ -1,3 +1,8 @@
+<div id="feeds">
+  <%= link_to('ICAL', {:action => :index, :format => :ical}, :class => 'label label-ical') %>
+  <%= link_to('JSON', {:action => :index, :format => :json}, :class => 'label label-json') %>
+</div>
+
 <% @resources.each do |type, resource| %>
   <h2><%= type.titleize.pluralize %></h2>
   <ul>
