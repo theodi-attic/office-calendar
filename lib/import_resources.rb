@@ -17,12 +17,14 @@ class ImportResources
       resource.touch  
     end
     
-    last_updated = DateTime.parse(Resource.order("updated_at desc").limit(1).first.updated_at.to_s)
+    if Resource.all.size > 0    
+      last_updated = DateTime.parse(Resource.order("updated_at desc").limit(1).first.updated_at.to_s)
     
-    Resource.where("updated_at < ?", last_updated).each do |resource|
-      resource.update_attributes(
-        :active => false
-      )
+      Resource.where("updated_at < ?", last_updated).each do |resource|
+        resource.update_attributes(
+          :active => false
+        )
+      end
     end
   end
 end
