@@ -28,7 +28,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development, :test do
+group :test do
+  gem 'pry'
+  gem 'rspec-rails'
+  gem 'webmock'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'vcr'
 end
