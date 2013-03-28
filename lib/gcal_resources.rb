@@ -30,7 +30,7 @@ class GCalResources
     token = get_oauth_token
     
     events = []
-    json = JSON.parse HTTParty.get("https://www.googleapis.com/calendar/v3/calendars/#{email}/events?timeZone=Europe%2FLondon", :headers => { "Authorization" => "OAuth #{token}"}).response.body
+    json = JSON.parse self.get("https://www.googleapis.com/calendar/v3/calendars/#{email}/events?timeZone=Europe%2FLondon", :headers => { "Authorization" => "OAuth #{token}"}).response.body
     
     unless json["items"].nil?
       json["items"].each do |item|
@@ -51,15 +51,73 @@ class GCalResources
     return events
   end
   
+  def self.get_event(email, id)
+    token = get_oauth_token
+    JSON.parse self.get("https://www.googleapis.com/calendar/v3/calendars/#{email}/events/#{id}", :headers => { "Authorization" => "OAuth #{token}"}).response.body
+  end
+  
+  def self.update_event(email, id)
+    # At the moment this only removes all attendees (so the tests pass), but can be adapted to do more stuff if needs be
+    event = get_event(email, id)
+    token = get_oauth_token
+        
+    body           = {
+      :kind        => "calendar#event",
+      :start       => event['start'],
+      :end         => event['end'],
+      :description => event['description'],
+      :attendees   => []
+    }.to_json
+    
+    JSON.parse self.put("https://www.googleapis.com/calendar/v3/calendars/#{email}/events/#{id}", :body => body, :headers => { "Authorization" => "OAuth #{token}", "Content-type" => "application/json"}).response.body
+  end
+  
+  def self.create_event(description, from, to, email)
+    token = get_oauth_token
+    
+    if from.class == DateTime
+      startdate = { 
+        :dateTime  => from, 
+        :timeZone => "Europe/London" 
+      }
+      enddate = { 
+        :dateTime  => to, 
+        :timeZone => "Europe/London" 
+      }
+    elsif from.class == Date
+      startdate = { 
+        :date  => from, 
+        :timeZone => "Europe/London" 
+      }
+      enddate = { 
+        :date  => to, 
+        :timeZone => "Europe/London" 
+      }
+    end
+        
+    body           = {
+      :kind        => "calendar#event",
+      :start       => startdate,
+      :end         => enddate,
+      :description => description,
+      :attendees   => [{ :email => email }]
+    }.to_json
+   
+    JSON.parse self.post("https://www.googleapis.com/calendar/v3/calendars/#{email}/events", :body => body, :headers => { "Authorization" => "OAuth #{token}", "Content-type" => "application/json"}).response.body
+  end
+  
   def self.get_oauth_token
+    @@client ||= nil
+    if @@client.nil? || (@@client.authorization.issued_at + @@client.authorization.expires_in < Time.now)
       path = Rails.root.join("#{ENV['GAPPS_PUBLIC_KEY_FINGERPRINT']}-privatekey.p12")
     
       key = Google::APIClient::PKCS12.load_key(path, 'notasecret')      
       asserter = Google::APIClient::JWTAsserter.new(ENV['GAPPS_SERVICE_ACCOUNT_EMAIL'],
           'https://www.googleapis.com/auth/calendar http://www.google.com/calendar/feeds/', key)
-      client = Google::APIClient.new
-      client.authorization = asserter.authorize(ENV['GAPPS_USER_EMAIL'])
-      client.authorization.access_token
+      @@client = Google::APIClient.new
+      @@client.authorization = asserter.authorize(ENV['GAPPS_USER_EMAIL'])
+    end
+    @@client.authorization.access_token
   end
   
   def self.get_auth_token
