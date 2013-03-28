@@ -15,7 +15,8 @@ $(document).ready(function() {
                         title : '<%= event[:title] %>', 
                         start : '<%= event[:start].strftime("%F %H:%M:%S") %>',
                         end : '<%= event[:end].strftime("%F %H:%M:%S") %>',
-                        allDay: <%= event[:allday].to_s %>
+                        allDay: <%= event[:allday].to_s %>,
+                        className : '<%= event[:start].strftime("Date%Y%m%d%H%M%S") %>'
                       },
                       <% end %>
                       ],
