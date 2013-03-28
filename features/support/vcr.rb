@@ -10,7 +10,7 @@ VCR.configure do |c|
   c.filter_sensitive_data("<KEY>") do |interaction|
     interaction.response.body.match(/SID=[a-z0-9_-]+[\s]+LSID=[a-z0-9_-]+[\s]+Auth=([a-z0-9_-]+)/i)
   end
-  c.default_cassette_options = { :record => :all }
+  c.default_cassette_options = { :record => :once }
   c.cassette_library_dir = 'fixtures/vcr_cassettes'
   c.hook_into :webmock
 end
