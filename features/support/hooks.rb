@@ -4,6 +4,19 @@ Before("@resources") do
   end
 end
 
+After("@calendar") do
+  VCR.use_cassette("Hooks") do
+    # Delete created events
+    GCalResources.get_resources.each do |resource|
+      GCalResources.get_events(resource[:email]).each do |event|
+        token = GCalResources.get_oauth_token
+        HTTParty.delete("https://www.googleapis.com/calendar/v3/calendars/#{resource[:email]}/events/#{event[:id]}", 
+                        :headers => { 'Authorization' => "OAuth #{token}" }).response.body  
+      end
+    end
+  end
+end
+
 at_exit do
   VCR.use_cassette("Hooks") do
     @token = GCalResources.get_auth_token
@@ -14,6 +27,6 @@ at_exit do
                       :headers => { 'Authorization' => "GoogleLogin auth=#{@token}", 
                                     'Content-Type'  => "application/atom+xml" 
                                     })  
-    end
+    end    
   end
 end
