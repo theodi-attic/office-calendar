@@ -29,6 +29,7 @@ group :assets do
 end
 
 group :test do
+  gem 'poltergeist'
   gem 'pry'
   gem 'rspec-rails'
   gem 'webmock'
