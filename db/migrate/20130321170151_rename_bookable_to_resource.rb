@@ -1,5 +1,5 @@
-class RenameresourceToResource < ActiveRecord::Migration
+class RenameBookableToResource < ActiveRecord::Migration
   def change
-    rename_table :resources, :resources
+    rename_table :bookables, :resources
   end
 end
