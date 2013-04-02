@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#ruby=ruby-1.9.3-p374
+#ruby-gemset=office-calendar
+
 gem 'rails', '3.2.12'
 
 gem 'sqlite3'
