@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class resourceTest < ActiveSupport::TestCase
+class ResourceControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
