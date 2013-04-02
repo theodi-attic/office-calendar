@@ -135,7 +135,7 @@ module GCal
     def self.get_oauth_token
       @@client ||= nil
       if @@client.nil? || (@@client.authorization.issued_at + @@client.authorization.expires_in < Time.now)
-        path = Rails.root.join("#{ENV['GAPPS_PUBLIC_KEY_FINGERPRINT']}-privatekey.p12")
+        path = ENV['GAPPS_PRIVATE_KEY_PATH']
     
         key = Google::APIClient::PKCS12.load_key(path, 'notasecret')      
         asserter = Google::APIClient::JWTAsserter.new(ENV['GAPPS_SERVICE_ACCOUNT_EMAIL'],
