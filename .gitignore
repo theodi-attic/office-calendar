@@ -15,6 +15,5 @@
 /tmp
 
 .DS_Store
-/.env
+/.env*
 /*privatekey.p12
-/production.env
