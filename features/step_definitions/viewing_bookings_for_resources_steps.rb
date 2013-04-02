@@ -4,7 +4,7 @@ Given(/^that a booking has been made in Google Calendar for between (#{DATETIME}
    @resource = Resource.find_by_google_id(@resource_id)
    @from = from
    @to = to
-   @event = GCalResources.create_event("Planning some evil", from, to, @resource.email)
+   @event = GCal::Events.create_event("Planning some evil", from, to, @resource.email)
 end
 
 Given(/^I visit the page for that resource$/) do
@@ -32,11 +32,11 @@ Given(/^that a booking has been made in Google Calendar for all day on (#{DATE})
   @resource = Resource.find_by_google_id(@resource_id)
   @from = date
   @to = date
-  @event = GCalResources.create_event("Planning yet more evil", date, date, @resource.email)
+  @event = GCal::Events.create_event("Planning yet more evil", date, date, @resource.email)
 end
 
 Given(/^the resource has been removed from the booking$/) do
-  GCalResources.update_event(@resource.email, @event['id'])
+  GCal::Events.update_event(@resource.email, @event['id'])
 end
 
 Then(/^I should not see a booking for that time$/) do

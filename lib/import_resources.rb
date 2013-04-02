@@ -1,11 +1,11 @@
-require 'gcal_resources'
+require 'google_calendar'
 
 class ImportResources
   @queue = :office_calendar
   
   def self.perform
     
-    GCalResources.get_resources.each do |res|
+    GCal::Resources.get_resources.each do |res|
       resource = Resource.find_or_create_by_google_id(res[:id])
       resource.update_attributes(
         :name         => res[:name], 
