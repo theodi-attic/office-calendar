@@ -102,7 +102,12 @@ module GCal
         :start       => event['start'],
         :end         => event['end'],
         :description => event['description'],
-        :attendees   => []
+        :attendees   => [
+          {
+            :email => email,
+            :responseStatus => "declined"
+          }
+        ]
       }.to_json
     
       JSON.parse self.put("https://www.googleapis.com/calendar/v3/calendars/#{email}/events/#{id}", :body => body, :headers => { "Authorization" => "OAuth #{token}", "Content-type" => "application/json"}).response.body
