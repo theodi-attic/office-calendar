@@ -60,7 +60,7 @@ module GCal
     
       unless json["items"].nil?
         json["items"].each do |item|
-          unless item['start'].nil? 
+          unless item['start'].nil? || item['status'] == "cancelled" || get_response(item) == "declined"
             events << {
               :id      => item['id'],
               :title   => item['end']['dateTime'].nil? ? "All Day" : "#{parse_time(item['start'].flatten[1])} - #{parse_time(item['end'].flatten[1])}",
@@ -75,6 +75,16 @@ module GCal
       end
     
       return events
+    end
+    
+    def self.get_response(event)
+      unless event['attendees'].nil?
+        event['attendees'].each do |item|
+          if item['self'] === true
+            return item['responseStatus']
+          end
+        end
+      end
     end
   
     def self.get_event(email, id)
