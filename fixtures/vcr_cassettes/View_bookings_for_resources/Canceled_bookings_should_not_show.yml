@@ -12,7 +12,7 @@ http_interactions:
         things are done'/>\n  <apps:property name='resourceType' value='Meeting Room'/>\n</atom:entry>"
     headers:
       Authorization:
-      - GoogleLogin auth=DQAAAPYAAADa4Sa3lcGcyKfyRpuJSycIPmrQ8LeOCOSiQXAfhcCpOcJmi8bqeujJLIYhmKCrIQu10-fDE2UdW2ACerSYn-DMpcZjlnJVZvEw7U8OGdYvZLXHROlqoHSdgmkrTyGly1HmaqzLu0CPuP4obTvKn2tWTfyacfPLxOkKY9-f_noW56uoIetW23NR29BPY6lOWnpw1fb6RhiBfk1TdTrrDlv-NBE0O7G3-SFC8N-QiqPPYkoXaeOUTxjsixtd9NVo4J9xNZ7LOFgNBVy7pEEywLIaV5-e_zatkpR24ys31rycrhmESiVrsUrDGCmfKwhD5LhvER4ZM5WXwxdF6k7qkjMa
+      - GoogleLogin auth=DQAAAPYAAABiVVyf2Psx4KQNxkBbJbtGreDA0VziUnUvR_YUy_jO-Cwwcx-AaeEoIFBtcHvKM7RF0JIkZL6DVwiK4H9ByNx6hQITKTKqsLHWm1a7AKMHwvjzB0qYOSOHgUln1EEp1UTZAG_Av7qVwnuVv2C7PH7yJNk1f768-jH50YwiXp6hI8B0fiIdqFEYkCRENIXzm3MEWAvYNNtwIV1xssyjGalqm6w3oHjE43UjgzFfDLP9BBiHxOn9hL0Sl9uSA5fokg5m1UkLfP52Ozw6RWlisoe0PlaXQ8D_Np70vpojlH-ckgSaYzpGXS2DPScAWVpXzi_X9e_coI0QVJr-opbWGlIN
       Content-Type:
       - application/atom+xml
   response:
@@ -23,9 +23,9 @@ http_interactions:
       Content-Type:
       - text/xml
       Date:
-      - Tue, 02 Apr 2013 06:18:13 GMT
+      - Thu, 04 Apr 2013 13:46:24 GMT
       Expires:
-      - Tue, 02 Apr 2013 06:18:13 GMT
+      - Thu, 04 Apr 2013 13:46:24 GMT
       Cache-Control:
       - private, max-age=0
       X-Content-Type-Options:
@@ -43,7 +43,7 @@ http_interactions:
       string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<AppsForYourDomainErrors>\r\n
         \ <error errorCode=\"1300\" invalidInput=\"\" reason=\"EntityExists\" />\r\n</AppsForYourDomainErrors>\r\n\r\n"
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:15 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:24 GMT
 - request:
     method: post
     uri: https://www.google.com/accounts/ClientLogin
@@ -65,7 +65,7 @@ http_interactions:
       Expires:
       - Mon, 01-Jan-1990 00:00:00 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:14 GMT
+      - Thu, 04 Apr 2013 13:46:26 GMT
       X-Content-Type-Options:
       - nosniff
       X-Xss-Protection:
@@ -80,7 +80,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:15 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:26 GMT
 - request:
     method: get
     uri: https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/
@@ -89,7 +89,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - GoogleLogin auth=DQAAAPYAAABeHGRHoa6jdDq9tpaNdXiw5cqRLMBZShPZRlPd-RNbUSsxA87SWh2AdVuK9clB_0AmAeUryflh0faMhDSdESnum23dmJyVSqa9Vrd8gR2Og73erQ3ZuGiw1VOEAVofjCAPwwJq0bV8g4MC4EBIB7hCkwiY1Q6QtJEqI6lzizENAoBTmg30z-XuJbLHOEag8WPPwmbYvrJfhHjX1-Wbu4gnkH4Hbb2aGW00fPhkQE29NqfDA6LKQWcMH4p7SNlh_ZNaRMDmMHy7WE2Zhaa5XPGmuNLtsmllsu05co24O0k_RFwMIdtrH9bSGQhvX9jZNtk5GYj0C1qG7uLFws-1Mj8Q
+      - GoogleLogin auth=DQAAAPYAAACb3eQWy5TYsyeaM35t0L_wahqYh8ryJq5Trf6AnXEU92Xch9aARowydwAIUKVy9Y0CVfvLUGg97RZpL1eieAuH4uJ334j8k_IMVdVmG-6WOLWxYTJVsc8gaX9K3D3twCm1l_Di41bTJRqOu4oaXI8ZFn0688iTwAxy6ubDkFQTzYv2mySSMMqaqBHlorpnz6NjhboRQVVviduTXmTAYxpSYq6bpyWZzogyt0nyywAxATrPGWJvOLxpIr_P_b3X-iVQ5Midu6lt67i7z5I5tkf0AIyqzUeAzp_89FwmwGEbper1l7rka8jPs8gwAjMKr6EBrW2687LUAFmz4OIMU2ZN
       Content-Type:
       - application/atom+xml
   response:
@@ -100,9 +100,9 @@ http_interactions:
       Content-Type:
       - application/atom+xml; charset=UTF-8
       Expires:
-      - Tue, 02 Apr 2013 06:18:15 GMT
+      - Thu, 04 Apr 2013 13:46:27 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:15 GMT
+      - Thu, 04 Apr 2013 13:46:27 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Vary:
@@ -110,7 +110,7 @@ http_interactions:
       Gdata-Version:
       - '1.0'
       Last-Modified:
-      - Tue, 02 Apr 2013 06:18:15 GMT
+      - Thu, 04 Apr 2013 13:46:27 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -124,10 +124,10 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: <?xml version='1.0' encoding='UTF-8'?><feed xmlns='http://www.w3.org/2005/Atom'
-        xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:apps='http://schemas.google.com/apps/2006'><id>https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME></id><updated>2013-04-02T06:18:15.272Z</updated><link
+        xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:apps='http://schemas.google.com/apps/2006'><id>https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME></id><updated>2013-04-04T13:46:27.367Z</updated><link
         rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>'/><link
         rel='http://schemas.google.com/g/2005#post' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>'/><link
-        rel='self' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>'/><openSearch:startIndex>1</openSearch:startIndex><entry><id>https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456</id><updated>2013-04-02T06:18:15.272Z</updated><link
+        rel='self' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>'/><openSearch:startIndex>1</openSearch:startIndex><entry><id>https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456</id><updated>2013-04-04T13:46:27.367Z</updated><link
         rel='self' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456'/><link
         rel='edit' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456'/><apps:property
         name='resourceId' value='123456'/><apps:property name='resourceCommonName'
@@ -135,7 +135,7 @@ http_interactions:
         name='resourceDescription' value='Where evil things are done'/><apps:property
         name='resourceType' value='Meeting Room'/></entry></feed>
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:16 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:27 GMT
 - request:
     method: post
     uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events
@@ -145,7 +145,7 @@ http_interactions:
         some evil","attendees":[{"email":"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com"}]}'
     headers:
       Authorization:
-      - OAuth 1/3lGpySrCC8tE5KfPIuUYlTSOzvmuFlCWaP0_xQh8L2U
+      - OAuth 1/Q0nCIpG52C_KPrVmImsRW5eNqKtb_OA7FTdNo2DvcqE
       Content-Type:
       - application/json
   response:
@@ -160,9 +160,9 @@ http_interactions:
       Expires:
       - Fri, 01 Jan 1990 00:00:00 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:16 GMT
+      - Thu, 04 Apr 2013 13:46:28 GMT
       Etag:
-      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY0ODgzNDk2MTExMDAw"'
+      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY1MDgzMTg3ODMxMDAw"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -177,45 +177,45 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY0ODgzNDk2MTExMDAw\\\"\",\n
-        \"id\": \"mp1lce7o9flcuvo118ij85ppo0\",\n \"status\": \"confirmed\",\n \"htmlLink\":
-        \"https://www.google.com/calendar/event?eid=bXAxbGNlN285ZmxjdXZvMTE4aWo4NXBwbzAgZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
-        \"created\": \"2013-04-02T06:18:16.000Z\",\n \"updated\": \"2013-04-02T06:18:16.111Z\",\n
+      string: ! "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY1MDgzMTg3ODMxMDAw\\\"\",\n
+        \"id\": \"66vl8g64n45un88kild8li1f48\",\n \"status\": \"confirmed\",\n \"htmlLink\":
+        \"https://www.google.com/calendar/event?eid=NjZ2bDhnNjRuNDV1bjg4a2lsZDhsaTFmNDggZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
+        \"created\": \"2013-04-04T13:46:27.000Z\",\n \"updated\": \"2013-04-04T13:46:27.831Z\",\n
         \"description\": \"Planning some evil\",\n \"creator\": {\n  \"email\": \"oditech@<GAPPS_DOMAIN_NAME>\",\n
         \ \"displayName\": \"Stuart Harrison\"\n },\n \"organizer\": {\n  \"email\":
         \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n  \"displayName\":
         \"Fortress of evil\",\n  \"self\": true\n },\n \"start\": {\n  \"dateTime\":
         \"2020-01-05T06:00:00-08:00\",\n  \"timeZone\": \"Europe/London\"\n },\n \"end\":
         {\n  \"dateTime\": \"2020-01-05T08:00:00-08:00\",\n  \"timeZone\": \"Europe/London\"\n
-        },\n \"iCalUID\": \"mp1lce7o9flcuvo118ij85ppo0@google.com\",\n \"sequence\":
+        },\n \"iCalUID\": \"66vl8g64n45un88kild8li1f48@google.com\",\n \"sequence\":
         0,\n \"attendees\": [\n  {\n   \"email\": \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n
         \  \"displayName\": \"Fortress of evil\",\n   \"organizer\": true,\n   \"self\":
         true,\n   \"resource\": true,\n   \"responseStatus\": \"needsAction\"\n  }\n
         ],\n \"reminders\": {\n  \"useDefault\": true\n }\n}\n"
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:17 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:27 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/mp1lce7o9flcuvo118ij85ppo0
+    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/66vl8g64n45un88kild8li1f48
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - OAuth 1/3lGpySrCC8tE5KfPIuUYlTSOzvmuFlCWaP0_xQh8L2U
+      - OAuth 1/Q0nCIpG52C_KPrVmImsRW5eNqKtb_OA7FTdNo2DvcqE
   response:
     status:
       code: 200
       message: OK
     headers:
       Expires:
-      - Tue, 02 Apr 2013 06:18:17 GMT
+      - Thu, 04 Apr 2013 13:46:28 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:17 GMT
+      - Thu, 04 Apr 2013 13:46:28 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY0ODgzNDk2MTExMDAw"'
+      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY1MDgzMTg3ODMxMDAw"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -230,33 +230,33 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY0ODgzNDk2MTExMDAw\\\"\",\n
-        \"id\": \"mp1lce7o9flcuvo118ij85ppo0\",\n \"status\": \"confirmed\",\n \"htmlLink\":
-        \"https://www.google.com/calendar/event?eid=bXAxbGNlN285ZmxjdXZvMTE4aWo4NXBwbzAgZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
-        \"created\": \"2013-04-02T06:18:16.000Z\",\n \"updated\": \"2013-04-02T06:18:16.111Z\",\n
+      string: ! "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY1MDgzMTg3ODMxMDAw\\\"\",\n
+        \"id\": \"66vl8g64n45un88kild8li1f48\",\n \"status\": \"confirmed\",\n \"htmlLink\":
+        \"https://www.google.com/calendar/event?eid=NjZ2bDhnNjRuNDV1bjg4a2lsZDhsaTFmNDggZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
+        \"created\": \"2013-04-04T13:46:27.000Z\",\n \"updated\": \"2013-04-04T13:46:27.831Z\",\n
         \"description\": \"Planning some evil\",\n \"creator\": {\n  \"email\": \"oditech@<GAPPS_DOMAIN_NAME>\",\n
         \ \"displayName\": \"Stuart Harrison\"\n },\n \"organizer\": {\n  \"email\":
         \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n  \"displayName\":
         \"Fortress of evil\",\n  \"self\": true\n },\n \"start\": {\n  \"dateTime\":
         \"2020-01-05T06:00:00-08:00\",\n  \"timeZone\": \"Europe/London\"\n },\n \"end\":
         {\n  \"dateTime\": \"2020-01-05T08:00:00-08:00\",\n  \"timeZone\": \"Europe/London\"\n
-        },\n \"iCalUID\": \"mp1lce7o9flcuvo118ij85ppo0@google.com\",\n \"sequence\":
+        },\n \"iCalUID\": \"66vl8g64n45un88kild8li1f48@google.com\",\n \"sequence\":
         0,\n \"attendees\": [\n  {\n   \"email\": \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n
         \  \"displayName\": \"Fortress of evil\",\n   \"organizer\": true,\n   \"self\":
         true,\n   \"resource\": true,\n   \"responseStatus\": \"needsAction\"\n  }\n
         ],\n \"reminders\": {\n  \"useDefault\": true\n }\n}\n"
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:18 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:28 GMT
 - request:
     method: put
-    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/mp1lce7o9flcuvo118ij85ppo0
+    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/66vl8g64n45un88kild8li1f48
     body:
       encoding: US-ASCII
       string: ! '{"kind":"calendar#event","start":{"dateTime":"2020-01-05T06:00:00-08:00","timeZone":"Europe/London"},"end":{"dateTime":"2020-01-05T08:00:00-08:00","timeZone":"Europe/London"},"description":"Planning
-        some evil","attendees":[]}'
+        some evil","attendees":[{"email":"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com","responseStatus":"declined"}]}'
     headers:
       Authorization:
-      - OAuth 1/3lGpySrCC8tE5KfPIuUYlTSOzvmuFlCWaP0_xQh8L2U
+      - OAuth 1/Q0nCIpG52C_KPrVmImsRW5eNqKtb_OA7FTdNo2DvcqE
       Content-Type:
       - application/json
   response:
@@ -271,9 +271,9 @@ http_interactions:
       Expires:
       - Fri, 01 Jan 1990 00:00:00 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:18 GMT
+      - Thu, 04 Apr 2013 13:46:28 GMT
       Etag:
-      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY0ODgzNDk4MTMzMDAw"'
+      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY1MDgzMTg4Njc2MDAw"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -288,20 +288,23 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY0ODgzNDk4MTMzMDAw\\\"\",\n
-        \"id\": \"mp1lce7o9flcuvo118ij85ppo0\",\n \"status\": \"confirmed\",\n \"htmlLink\":
-        \"https://www.google.com/calendar/event?eid=bXAxbGNlN285ZmxjdXZvMTE4aWo4NXBwbzAgZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
-        \"created\": \"2013-04-02T06:18:16.000Z\",\n \"updated\": \"2013-04-02T06:18:18.133Z\",\n
+      string: ! "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY1MDgzMTg4Njc2MDAw\\\"\",\n
+        \"id\": \"66vl8g64n45un88kild8li1f48\",\n \"status\": \"confirmed\",\n \"htmlLink\":
+        \"https://www.google.com/calendar/event?eid=NjZ2bDhnNjRuNDV1bjg4a2lsZDhsaTFmNDggZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
+        \"created\": \"2013-04-04T13:46:27.000Z\",\n \"updated\": \"2013-04-04T13:46:28.676Z\",\n
         \"description\": \"Planning some evil\",\n \"creator\": {\n  \"email\": \"oditech@<GAPPS_DOMAIN_NAME>\",\n
         \ \"displayName\": \"Stuart Harrison\"\n },\n \"organizer\": {\n  \"email\":
         \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n  \"displayName\":
         \"Fortress of evil\",\n  \"self\": true\n },\n \"start\": {\n  \"dateTime\":
         \"2020-01-05T06:00:00-08:00\",\n  \"timeZone\": \"Europe/London\"\n },\n \"end\":
         {\n  \"dateTime\": \"2020-01-05T08:00:00-08:00\",\n  \"timeZone\": \"Europe/London\"\n
-        },\n \"iCalUID\": \"mp1lce7o9flcuvo118ij85ppo0@google.com\",\n \"sequence\":
-        0,\n \"reminders\": {\n  \"useDefault\": true\n }\n}\n"
+        },\n \"iCalUID\": \"66vl8g64n45un88kild8li1f48@google.com\",\n \"sequence\":
+        0,\n \"attendees\": [\n  {\n   \"email\": \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n
+        \  \"displayName\": \"Fortress of evil\",\n   \"organizer\": true,\n   \"self\":
+        true,\n   \"resource\": true,\n   \"responseStatus\": \"declined\"\n  }\n
+        ],\n \"reminders\": {\n  \"useDefault\": true\n }\n}\n"
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:19 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:28 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events?timeZone=Europe/London
@@ -310,20 +313,20 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - OAuth 1/3lGpySrCC8tE5KfPIuUYlTSOzvmuFlCWaP0_xQh8L2U
+      - OAuth 1/Q0nCIpG52C_KPrVmImsRW5eNqKtb_OA7FTdNo2DvcqE
   response:
     status:
       code: 200
       message: OK
     headers:
       Expires:
-      - Tue, 02 Apr 2013 06:18:19 GMT
+      - Thu, 04 Apr 2013 13:46:29 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:19 GMT
+      - Thu, 04 Apr 2013 13:46:29 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/BAVxP1Eo1nRpNbijLkVDLSGGy80"'
+      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/o1eiWx3i7yXIPjNLn_9ymAwqZow"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -338,22 +341,24 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! "{\n \"kind\": \"calendar#events\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/BAVxP1Eo1nRpNbijLkVDLSGGy80\\\"\",\n
-        \"summary\": \"Fortress of evil\",\n \"updated\": \"2013-04-02T06:18:18.133Z\",\n
+      string: ! "{\n \"kind\": \"calendar#events\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/o1eiWx3i7yXIPjNLn_9ymAwqZow\\\"\",\n
+        \"summary\": \"Fortress of evil\",\n \"updated\": \"2013-04-04T13:46:28.000Z\",\n
         \"timeZone\": \"America/Los_Angeles\",\n \"items\": [\n  {\n   \"kind\": \"calendar#event\",\n
-        \  \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY0ODgzNDk4MTMzMDAw\\\"\",\n
-        \  \"id\": \"mp1lce7o9flcuvo118ij85ppo0\",\n   \"status\": \"confirmed\",\n
-        \  \"htmlLink\": \"https://www.google.com/calendar/event?eid=bXAxbGNlN285ZmxjdXZvMTE4aWo4NXBwbzAgZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
-        \  \"created\": \"2013-04-02T06:18:16.000Z\",\n   \"updated\": \"2013-04-02T06:18:18.133Z\",\n
+        \  \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY1MDgzMTg4Njc2MDAw\\\"\",\n
+        \  \"id\": \"66vl8g64n45un88kild8li1f48\",\n   \"status\": \"confirmed\",\n
+        \  \"htmlLink\": \"https://www.google.com/calendar/event?eid=NjZ2bDhnNjRuNDV1bjg4a2lsZDhsaTFmNDggZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
+        \  \"created\": \"2013-04-04T13:46:27.000Z\",\n   \"updated\": \"2013-04-04T13:46:28.676Z\",\n
         \  \"description\": \"Planning some evil\",\n   \"creator\": {\n    \"email\":
         \"oditech@<GAPPS_DOMAIN_NAME>\",\n    \"displayName\": \"Stuart Harrison\"\n
         \  },\n   \"organizer\": {\n    \"email\": \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n
         \   \"displayName\": \"Fortress of evil\",\n    \"self\": true\n   },\n   \"start\":
         {\n    \"dateTime\": \"2020-01-05T14:00:00Z\",\n    \"timeZone\": \"Europe/London\"\n
         \  },\n   \"end\": {\n    \"dateTime\": \"2020-01-05T16:00:00Z\",\n    \"timeZone\":
-        \"Europe/London\"\n   },\n   \"iCalUID\": \"mp1lce7o9flcuvo118ij85ppo0@google.com\",\n
-        \  \"sequence\": 0,\n   \"reminders\": {\n    \"useDefault\": true\n   }\n
-        \ }\n ]\n}\n"
+        \"Europe/London\"\n   },\n   \"iCalUID\": \"66vl8g64n45un88kild8li1f48@google.com\",\n
+        \  \"sequence\": 0,\n   \"attendees\": [\n    {\n     \"email\": \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n
+        \    \"displayName\": \"Fortress of evil\",\n     \"organizer\": true,\n     \"self\":
+        true,\n     \"resource\": true,\n     \"responseStatus\": \"declined\"\n    }\n
+        \  ],\n   \"reminders\": {\n    \"useDefault\": true\n   }\n  }\n ]\n}\n"
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:20 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:28 GMT
 recorded_with: VCR 2.4.0

@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/93r5vj3a89rd4rejdmu7n6nccs
+    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/215csvtq9n1s6ocaflc1oq1ctc
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - OAuth 1/SomPA9nn2QqyLLnrjQwyTC3eKtov-1FEAuQBJjTgnyY
+      - OAuth 1/Q0nCIpG52C_KPrVmImsRW5eNqKtb_OA7FTdNo2DvcqE
   response:
     status:
       code: 204
@@ -21,7 +21,7 @@ http_interactions:
       Expires:
       - Fri, 01 Jan 1990 00:00:00 GMT
       Date:
-      - Tue, 02 Apr 2013 06:15:56 GMT
+      - Thu, 04 Apr 2013 13:46:15 GMT
       Etag:
       - ! '"AqtoNyKo3lU98az21po-fy8rWgE/vyGp6PvFo4RvsFtPoIWeCReyIC8"'
       Server:
@@ -30,16 +30,16 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:15:58 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:14 GMT
 - request:
     method: delete
-    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/oqkfs46ua6cfsha63igne0f2nk
+    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/2lats6hn6cok6ma4qab9gi938o
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - OAuth 1/3lGpySrCC8tE5KfPIuUYlTSOzvmuFlCWaP0_xQh8L2U
+      - OAuth 1/Q0nCIpG52C_KPrVmImsRW5eNqKtb_OA7FTdNo2DvcqE
   response:
     status:
       code: 204
@@ -52,7 +52,7 @@ http_interactions:
       Expires:
       - Fri, 01 Jan 1990 00:00:00 GMT
       Date:
-      - Tue, 02 Apr 2013 06:17:39 GMT
+      - Thu, 04 Apr 2013 13:46:22 GMT
       Etag:
       - ! '"AqtoNyKo3lU98az21po-fy8rWgE/vyGp6PvFo4RvsFtPoIWeCReyIC8"'
       Server:
@@ -61,38 +61,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:17:41 GMT
-- request:
-    method: delete
-    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/du8hv6f8fdpm0indcl6blqvpbk
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - OAuth 1/3lGpySrCC8tE5KfPIuUYlTSOzvmuFlCWaP0_xQh8L2U
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Date:
-      - Tue, 02 Apr 2013 06:17:59 GMT
-      Etag:
-      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/vyGp6PvFo4RvsFtPoIWeCReyIC8"'
-      Server:
-      - GSE
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:01 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:22 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events?timeZone=Europe/London
@@ -101,20 +70,20 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - OAuth 1/3lGpySrCC8tE5KfPIuUYlTSOzvmuFlCWaP0_xQh8L2U
+      - OAuth 1/Q0nCIpG52C_KPrVmImsRW5eNqKtb_OA7FTdNo2DvcqE
   response:
     status:
       code: 200
       message: OK
     headers:
       Expires:
-      - Tue, 02 Apr 2013 06:18:41 GMT
+      - Thu, 04 Apr 2013 13:46:31 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:41 GMT
+      - Thu, 04 Apr 2013 13:46:31 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/BAVxP1Eo1nRpNbijLkVDLSGGy80"'
+      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/id7vEVSwtr5YmZ1Us0YwTSnYVfM"'
       Content-Type:
       - application/json; charset=UTF-8
       X-Content-Type-Options:
@@ -129,55 +98,26 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: ! "{\n \"kind\": \"calendar#events\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/BAVxP1Eo1nRpNbijLkVDLSGGy80\\\"\",\n
-        \"summary\": \"Fortress of evil\",\n \"updated\": \"2013-04-02T06:18:18.133Z\",\n
+      string: ! "{\n \"kind\": \"calendar#events\",\n \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/id7vEVSwtr5YmZ1Us0YwTSnYVfM\\\"\",\n
+        \"summary\": \"Fortress of evil\",\n \"updated\": \"2013-04-04T13:46:28.000Z\",\n
         \"timeZone\": \"America/Los_Angeles\",\n \"items\": [\n  {\n   \"kind\": \"calendar#event\",\n
-        \  \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY0ODgzNDk4MTMzMDAw\\\"\",\n
-        \  \"id\": \"mp1lce7o9flcuvo118ij85ppo0\",\n   \"status\": \"confirmed\",\n
-        \  \"htmlLink\": \"https://www.google.com/calendar/event?eid=bXAxbGNlN285ZmxjdXZvMTE4aWo4NXBwbzAgZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
-        \  \"created\": \"2013-04-02T06:18:16.000Z\",\n   \"updated\": \"2013-04-02T06:18:18.133Z\",\n
+        \  \"etag\": \"\\\"AqtoNyKo3lU98az21po-fy8rWgE/Z2NhbDAwMDAxMzY1MDgzMTg4Njc2MDAw\\\"\",\n
+        \  \"id\": \"66vl8g64n45un88kild8li1f48\",\n   \"status\": \"confirmed\",\n
+        \  \"htmlLink\": \"https://www.google.com/calendar/event?eid=NjZ2bDhnNjRuNDV1bjg4a2lsZDhsaTFmNDggZGV2b2RpLm15Z2Jpei5jb21fMzEzMjMzMzQzNTM2QHJlc291cmNlLmNhbGVuZGFyLmdvb2dsZS5jb20\",\n
+        \  \"created\": \"2013-04-04T13:46:27.000Z\",\n   \"updated\": \"2013-04-04T13:46:28.676Z\",\n
         \  \"description\": \"Planning some evil\",\n   \"creator\": {\n    \"email\":
         \"oditech@<GAPPS_DOMAIN_NAME>\",\n    \"displayName\": \"Stuart Harrison\"\n
         \  },\n   \"organizer\": {\n    \"email\": \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n
         \   \"displayName\": \"Fortress of evil\",\n    \"self\": true\n   },\n   \"start\":
         {\n    \"dateTime\": \"2020-01-05T14:00:00Z\",\n    \"timeZone\": \"Europe/London\"\n
         \  },\n   \"end\": {\n    \"dateTime\": \"2020-01-05T16:00:00Z\",\n    \"timeZone\":
-        \"Europe/London\"\n   },\n   \"iCalUID\": \"mp1lce7o9flcuvo118ij85ppo0@google.com\",\n
-        \  \"sequence\": 0,\n   \"reminders\": {\n    \"useDefault\": true\n   }\n
-        \ }\n ]\n}\n"
+        \"Europe/London\"\n   },\n   \"iCalUID\": \"66vl8g64n45un88kild8li1f48@google.com\",\n
+        \  \"sequence\": 0,\n   \"attendees\": [\n    {\n     \"email\": \"<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com\",\n
+        \    \"displayName\": \"Fortress of evil\",\n     \"organizer\": true,\n     \"self\":
+        true,\n     \"resource\": true,\n     \"responseStatus\": \"declined\"\n    }\n
+        \  ],\n   \"reminders\": {\n    \"useDefault\": true\n   }\n  }\n ]\n}\n"
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:43 GMT
-- request:
-    method: delete
-    uri: https://www.googleapis.com/calendar/v3/calendars/<GAPPS_DOMAIN_NAME>_313233343536@resource.calendar.google.com/events/mp1lce7o9flcuvo118ij85ppo0
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - OAuth 1/3lGpySrCC8tE5KfPIuUYlTSOzvmuFlCWaP0_xQh8L2U
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - Fri, 01 Jan 1990 00:00:00 GMT
-      Date:
-      - Tue, 02 Apr 2013 06:18:42 GMT
-      Etag:
-      - ! '"AqtoNyKo3lU98az21po-fy8rWgE/vyGp6PvFo4RvsFtPoIWeCReyIC8"'
-      Server:
-      - GSE
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:43 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:31 GMT
 - request:
     method: post
     uri: https://www.google.com/accounts/ClientLogin
@@ -199,7 +139,7 @@ http_interactions:
       Expires:
       - Mon, 01-Jan-1990 00:00:00 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:43 GMT
+      - Thu, 04 Apr 2013 13:46:32 GMT
       X-Content-Type-Options:
       - nosniff
       X-Xss-Protection:
@@ -214,7 +154,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:44 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:31 GMT
 - request:
     method: post
     uri: https://www.google.com/accounts/ClientLogin
@@ -236,7 +176,7 @@ http_interactions:
       Expires:
       - Mon, 01-Jan-1990 00:00:00 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:44 GMT
+      - Thu, 04 Apr 2013 13:46:32 GMT
       X-Content-Type-Options:
       - nosniff
       X-Xss-Protection:
@@ -251,7 +191,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:45 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:32 GMT
 - request:
     method: get
     uri: https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/
@@ -260,7 +200,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - GoogleLogin auth=DQAAAPYAAAA9uAhscg5tW4wVfMvUEDazu5lK88h6R4ebjZsyLDVM4WnI-syaN5_3jygH7nwQCOT-GbnJXoqlOngQd_N5j6n70eFhTOS9J1XIHaxV_3QMTMgvlW-comw2VcviwkULD0-yp7OqZQY8j6zPT42Wal0FJMb6wnrS_yvAvhKBZR2u9TU0anj9EfLhwcCbAGpZPYch-a6MdmruxoaNGwGWIVynXNj3I-2d1O8lWVxW8DKRZYU4667ZALqkywpzzRWAkbROTrw2uM1634425Q3IacWregBfWPYUnzcgoRltzCSA8Ool2CGabS53gF1MBzdTNpF2pRhzzWMOjV78ad3Mnmn2
+      - GoogleLogin auth=DQAAAPYAAABBhXuF8KHPEJWM6EgI5DPWc3kvkg2sOKqG7EgYo6kqLDjLg3KII7aVJTM5lzQhijV7ygrhVFgs_Dbm-KYFsq-b3JDP_qudyt036ISKPVc5gPrQX9tRxnuAffAfUy7XfBf13kmffN47ezXJPzXQHhCgBNWBH8dNdHKD1_n_Zit8H5YNrkINhYn2361vV_Nira5lFb41kklLOoDqNsQnBPyGym1iFY6Yv_uhIiK2vtWIuwHJTYZsYcXslbZ7w0H0d2enGde-pZ5OCupT7l1R6J4FBMLSwhHwBGiRPB8iQQjpsilSV0ySEhEC8dLqwLUSOTGAMnXUI8H4KHs7aEjlRE0P
       Content-Type:
       - application/atom+xml
   response:
@@ -271,9 +211,9 @@ http_interactions:
       Content-Type:
       - application/atom+xml; charset=UTF-8
       Expires:
-      - Tue, 02 Apr 2013 06:18:45 GMT
+      - Thu, 04 Apr 2013 13:46:32 GMT
       Date:
-      - Tue, 02 Apr 2013 06:18:45 GMT
+      - Thu, 04 Apr 2013 13:46:32 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Vary:
@@ -281,7 +221,7 @@ http_interactions:
       Gdata-Version:
       - '1.0'
       Last-Modified:
-      - Tue, 02 Apr 2013 06:18:45 GMT
+      - Thu, 04 Apr 2013 13:46:32 GMT
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -295,10 +235,10 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: <?xml version='1.0' encoding='UTF-8'?><feed xmlns='http://www.w3.org/2005/Atom'
-        xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:apps='http://schemas.google.com/apps/2006'><id>https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME></id><updated>2013-04-02T06:18:45.515Z</updated><link
+        xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:apps='http://schemas.google.com/apps/2006'><id>https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME></id><updated>2013-04-04T13:46:32.845Z</updated><link
         rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>'/><link
         rel='http://schemas.google.com/g/2005#post' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>'/><link
-        rel='self' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>'/><openSearch:startIndex>1</openSearch:startIndex><entry><id>https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456</id><updated>2013-04-02T06:18:45.515Z</updated><link
+        rel='self' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>'/><openSearch:startIndex>1</openSearch:startIndex><entry><id>https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456</id><updated>2013-04-04T13:46:32.845Z</updated><link
         rel='self' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456'/><link
         rel='edit' type='application/atom+xml' href='https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456'/><apps:property
         name='resourceId' value='123456'/><apps:property name='resourceCommonName'
@@ -306,7 +246,7 @@ http_interactions:
         name='resourceDescription' value='Where evil things are done'/><apps:property
         name='resourceType' value='Meeting Room'/></entry></feed>
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:46 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:32 GMT
 - request:
     method: delete
     uri: https://apps-apis.google.com/a/feeds/calendar/resource/2.0/<GAPPS_DOMAIN_NAME>/123456
@@ -315,7 +255,7 @@ http_interactions:
       string: ''
     headers:
       Authorization:
-      - GoogleLogin auth=DQAAAPYAAADQ3xDPwU2-zc3KsyJWhZj-2LYWS7nCD56QmJgQIg_s_5lM1ssYVMp2PlXcGUXwzsqqcF68gkjSKqV84xasq_QhZRDgyFNbvp7ad6pMpyh7O7icw5l7_yWYbYQQnFnWaSn42NpTCxKnjd5PeLLexy1De8v9YEua8v7WbJ-ljN1VUMjzKervF0KnDDX6l4ZVabe7HE7CXBnScIb_hWKVOHdwgkH3MH7cq0FJgnzkvW5eUxL9uIL9DeCk7Z9xLVp3sQJk0Q8O4foJoFlBX4LX317-vYpMycr3pGjqIoDSfAvzpb_4CAg2X91EvMM1fDESY7lqY1G-ZD8Xmhivs2zPJAgL
+      - GoogleLogin auth=DQAAAPYAAABBhXuF8KHPEJWM6EgI5DPWc3kvkg2sOKqG7EgYo6kqLDjLg3KII7aVJTM5lzQhijV7ygrhVFgs_Dbm-KYFsq-b3JDP_qudyt036ISKPVc5gPrQX9tRxnuAffAfUy7XfBf13kmffN47ezXJPzXQHhCgBNWBH8dNdHKD1_n_Zit8H5YNrkINhYn2361vV_Nira5lFb41kklLOoDqNsQnBPyGym1iFY6Yv_uhIiK2vtWIuwHJTYZsYcXslbZ7w0H0d2dIb8QUQeixK_lF1d6pcKLlgutFdp3lLuwigppYXNITd_NZFb8u_GuQqy678Iytc9jQ8IZnvAizIu8R6tdyhsqK
       Content-Type:
       - application/atom+xml
   response:
@@ -326,9 +266,9 @@ http_interactions:
       Gdata-Version:
       - '1.0'
       Date:
-      - Tue, 02 Apr 2013 06:18:50 GMT
+      - Thu, 04 Apr 2013 13:46:34 GMT
       Expires:
-      - Tue, 02 Apr 2013 06:18:50 GMT
+      - Thu, 04 Apr 2013 13:46:34 GMT
       Cache-Control:
       - private, max-age=0
       X-Content-Type-Options:
@@ -347,5 +287,5 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: 
-  recorded_at: Tue, 02 Apr 2013 06:18:51 GMT
+  recorded_at: Thu, 04 Apr 2013 13:46:34 GMT
 recorded_with: VCR 2.4.0
