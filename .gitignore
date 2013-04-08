@@ -17,3 +17,10 @@
 .DS_Store
 /.env*
 /*privatekey.p12
+
+.idea/
+.generators
+.chef/*.pem
+.chef/id_*
+.chef/*secrets*
+.vagrant
