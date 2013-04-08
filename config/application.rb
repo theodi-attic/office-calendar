@@ -67,8 +67,8 @@ module OfficeCalendar
     config.cache_store = :redis_store, "redis://#{ENV['RESQUE_REDIS_HOST']}/0/cache"
 
     config.action_dispatch.rack_cache = {
-      metastore:   "redis://localhost:6379/1/metastore",
-      entitystore: "redis://localhost:6379/1/entitystore"
+      metastore:   "redis://#{ENV['RESQUE_REDIS_HOST']}:#{ENV['RESQUE_REDIS_PORT']}/1/metastore",
+      entitystore: "redis://#{ENV['RESQUE_REDIS_HOST']}:#{ENV['RESQUE_REDIS_PORT']}/1/entitystore"
     }
     
   end
