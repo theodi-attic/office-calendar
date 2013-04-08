@@ -64,14 +64,6 @@ module OfficeCalendar
     
     config.action_controller.perform_caching = true
     
-    ENV['RESQUE_REDIS_PASSWORD'].blank? ? auth = nil : auth = ":#{ENV['RESQUE_REDIS_PASSWORD']}@"
-
-    config.cache_store = :redis_store, "redis://#{auth}#{ENV['RESQUE_REDIS_HOST']}:#{ENV['RESQUE_REDIS_PORT']}/0/cache"
-
-    config.action_dispatch.rack_cache = {
-      metastore:   "redis://#{auth}#{ENV['RESQUE_REDIS_HOST']}:#{ENV['RESQUE_REDIS_PORT']}/1/metastore",
-      entitystore: "redis://:#{auth}#{ENV['RESQUE_REDIS_HOST']}:#{ENV['RESQUE_REDIS_PORT']}/1/entitystore"
-    }
-    
+    config.cache_store = :memory_store
   end
 end
