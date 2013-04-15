@@ -3,4 +3,4 @@ import_resources:
   class: ImportResources
   args:
   description: "Imports and updates resources from Google Calendar"
-  
+  queue: office_calendar
