@@ -8,4 +8,6 @@ Resque.redis = Redis.new(
   :password => (ENV['RESQUE_REDIS_PASSWORD'].nil? || ENV['RESQUE_REDIS_PASSWORD']=='' ? nil : ENV['RESQUE_REDIS_PASSWORD'])
 )
 
+Resque::Scheduler.dynamic = true
+
 Resque.schedule = YAML.load_file(Rails.root.join('config', 'schedule.yml'))
