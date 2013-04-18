@@ -1,6 +1,10 @@
 office-calendar
 ===============
 
+[![Build Status](http://jenkins.theodi.org/job/office-calendar-build-master/badge/icon)](http://jenkins.theodi.org/job/office-calendar-build-master/)
+[![Dependency Status](https://gemnasium.com/theodi/office-calendar.png)](https://gemnasium.com/theodi/office-calendar)
+[![Code Climate](https://codeclimate.com/github/theodi/office-calendar.png)](https://codeclimate.com/github/theodi/office-calendar)
+
 Shows the availability of pods, desks and meeting rooms for members at the ODI offices
 
 License
