@@ -3,6 +3,12 @@ office-calendar
 
 Shows the availability of pods, desks and meeting rooms for members at the ODI offices
 
+License
+-------
+
+This code is open source under the MIT license. See the LICENSE.md file for 
+full details.
+
 Setting up the Google Apps API
 ------------------------------
 
