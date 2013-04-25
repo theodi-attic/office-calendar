@@ -32,10 +32,5 @@ $(document).ready(function() {
 
 <p><%= @resource.description %></p>
 
-<div id="feeds">
-  <%= link_to('ICAL', resource_path(@resource, :format => :ics), {:class => 'label label-ical'}) %>
-  <%= link_to('JSON', resource_path(@resource, :format => :json), {:class => 'label label-json'}) %>
-</div>
-
 <div id='loading' style='display:none'>loading...</div>
 <div id='calendar'></div>
