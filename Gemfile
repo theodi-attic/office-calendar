@@ -23,6 +23,8 @@ gem 'foreman'
 
 gem 'airbrake'
 
+gem 'alternate_rails', :git => 'https://github.com/theodi/alternate-rails.git'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
