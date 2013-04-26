@@ -1,4 +1,7 @@
 class ResourceController < ApplicationController
+  
+  before_filter(:only => [:index, :show]) { set_alternate_formats [:json, :ics] }
+
   def index
     @resources = Resource.where(:active => true)
     respond_to do |format|
