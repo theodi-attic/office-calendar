@@ -7,7 +7,7 @@
 
 if Rails.env.production?
   raise "Session secret not set!" unless ENV['SESSION_SECRET_CALENDAR']
-  MemberDirectory::Application.config.secret_token = ENV['SESSION_SECRET_CALENDAR']
+  OfficeCalendar::Application.config.secret_token = ENV['SESSION_SECRET_CALENDAR']
 else
-  MemberDirectory::Application.config.secret_token = SecureRandom.hex(32)
+  OfficeCalendar::Application.config.secret_token = SecureRandom.hex(32)
 end
