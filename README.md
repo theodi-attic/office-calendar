@@ -1,4 +1,4 @@
-office-calendar
+Office Calendar
 ===============
 
 [![Build Status](http://jenkins.theodi.org/job/office-calendar-build-master/badge/icon)](http://jenkins.theodi.org/job/office-calendar-build-master/)
