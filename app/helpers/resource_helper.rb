@@ -16,4 +16,30 @@ module ResourceHelper
     calendar.to_ical
   end
   
+  def get_resources
+    content = '''
+    <div class="navbar navbar-static-top" id="mainnav">
+				<div class="container">
+					<div class="navbar-inner">
+						<ul class="nav pull-right">
+    '''
+    Resource.where(:active => true).each do |res|
+      content << "<li>"
+      content << link_to(res.name, res)
+      unless params[:action] == "index"
+        if resource_url(res).match(/#{params[:id]}/)
+          content << '<div class="arrow-down"></div>'
+        end
+      end
+      content << "</li>"
+    end
+    content << '''
+    			</ul>
+				</div>
+			</div>
+		</div>
+    '''
+    concat(content.html_safe)
+  end
+  
 end
