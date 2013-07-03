@@ -1,10 +1,18 @@
-<% @resources.each do |type, resource| %>
-  <h2><%= type.titleize.pluralize %></h2>
-  <ul>
-  <% resource.each do |res| %>
-    <li><%= link_to(res.name, res) %></li>
-  <% end %>
-  </ul>
-<% end %>
+<header>
+		<div class="container">
+			<h1>Choose a calendar</h1>
+		</div>
+</header>
 
-<%= render 'shared/alternate_formats' %>
+<div class='container main-default' id='main'>
+	<% @resources.each do |type, resource| %>
+	  <h2><%= type.titleize.pluralize %></h2>
+	  <ul>
+	  <% resource.each do |res| %>
+	    <li><%= link_to(res.name, res) %></li>
+	  <% end %>
+	  </ul>
+	<% end %>
+
+	<%= render 'shared/alternate_formats' %>
+</div>
