@@ -38,7 +38,7 @@ Then(/^I should see a resource called "(.*?)"$/) do |name|
 end
 
 Then(/^when I click on that item$/) do
-  page.click_link(@resource_name)
+  page.first(:link, @resource_name).click
 end
 
 Then(/^I should see it has a description "(.*?)"$/) do |description|
@@ -57,7 +57,7 @@ end
 Then(/^I should see the changed description$/) do
   visit('/')
   page.should have_content @resource_name
-  page.click_link(@resource_name)
+  page.first(:link, @resource_name).click
 end
 
 Given(/^there is no longer a resource with the id "(.*?)" and the name "(.*?)" in Google Apps$/) do |id, name|

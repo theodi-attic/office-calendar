@@ -9,7 +9,7 @@ end
 
 Given(/^I visit the page for that resource$/) do
   visit('/')
-  page.click_link(@resource_name)
+  page.first(:link, @resource_name).click
 end
 
 Given(/^I navigate to the correct month$/) do
