@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/theodi/fullcalendar-rails.git
-  revision: 2006c04993a7217c2959047d9c10dc2d7c107a50
+  revision: 3b60600df71ac37c2fbf226633f09a270be72e7c
   specs:
     fullcalendar-rails (1.5.4.0)
 
