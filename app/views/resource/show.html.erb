@@ -28,11 +28,19 @@ $(document).ready(function() {
 
 </script>
 
-<h2><%= @resource.name %></h2>
+<header>
+		<div class="container">
+			<h1><%= @resource.name %></h1>
+		</div>
+</header>
 
-<p><%= @resource.description %></p>
+<div class='container main-default' id='main'>
 
-<div id='loading' style='display:none'>loading...</div>
-<div id='calendar'></div>
+	<p><%= @resource.description %></p>
 
-<%= render 'shared/alternate_formats' %>
+	<div id='loading' style='display:none'>loading...</div>
+	<div id='calendar'></div>
+
+	<%= render 'shared/alternate_formats' %>
+
+</div>
