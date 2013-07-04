@@ -6,7 +6,7 @@ Office Calendar
 [![Code Climate](https://codeclimate.com/github/theodi/office-calendar.png)](https://codeclimate.com/github/theodi/office-calendar)
 
 Shows the availability of pods, desks and meeting rooms for members at the ODI offices
-
+ 
 License
 -------
 
