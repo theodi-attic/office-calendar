@@ -1,7 +1,7 @@
 Office Calendar
 ===============
 
-[![Build Status](http://jenkins.theodi.org/job/office-calendar-build-master/badge/icon)](http://jenkins.theodi.org/job/office-calendar-build-master/)
+[![Build Status](http://jenkins.theodi.org/job/office-calendar-master/badge/icon)](http://jenkins.theodi.org/job/office-calendar-master/)
 [![Dependency Status](https://gemnasium.com/theodi/office-calendar.png)](https://gemnasium.com/theodi/office-calendar)
 [![Code Climate](https://codeclimate.com/github/theodi/office-calendar.png)](https://codeclimate.com/github/theodi/office-calendar)
 
