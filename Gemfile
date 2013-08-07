@@ -46,6 +46,6 @@ group :test do
   gem 'rspec-rails'
   gem 'webmock'
   gem 'cucumber-rails', :require => false
-  gem 'database_cleaner'
+  gem 'database_cleaner', '<= 1.0.1'
   gem 'vcr'
 end
