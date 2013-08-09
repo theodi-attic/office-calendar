@@ -24,3 +24,5 @@
 .chef/id_*
 .chef/*secrets*
 .vagrant
+
+/coverage/

@@ -239,6 +239,12 @@ GEM
       faraday (~> 0.8.1)
       jwt (>= 0.1.5)
       multi_json (>= 1.0.0)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
     sinatra (1.4.3)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -304,6 +310,7 @@ DEPENDENCIES
   resque
   rspec-rails
   sass-rails (~> 3.2.3)
+  simplecov-rcov
   sqlite3
   therubyracer
   thin
