@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-#ruby=ruby-1.9.3-p374
+#ruby=ruby-1.9.3
 #ruby-gemset=office-calendar
 
 gem 'rails', '3.2.13'
