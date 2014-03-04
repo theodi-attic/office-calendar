@@ -1,9 +1,12 @@
+[![Build Status](http://img.shields.io/travis/theodi/office-calendar.svg)](https://travis-ci.org/theodi/office-calendar)
+[![Dependency Status](http://img.shields.io/gemnasium/theodi/office-calendar.svg)](https://gemnasium.com/theodi/office-calendar)
+[![Coverage Status](http://img.shields.io/coveralls/theodi/office-calendar.svg)](https://coveralls.io/r/theodi/office-calendar)
+[![Code Climate](http://img.shields.io/codeclimate/github/theodi/office-calendar.svg)](https://codeclimate.com/github/theodi/office-calendar)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://theodi.mit-license.org)
+[![Badges](http://img.shields.io/:badges-6/6-ff6799.svg)](https://github.com/pikesley/badger)
+
 Office Calendar
 ===============
-
-[![Build Status](http://jenkins.theodi.org/job/office-calendar-master/badge/icon)](http://jenkins.theodi.org/job/office-calendar-master/)
-[![Dependency Status](https://gemnasium.com/theodi/office-calendar.png)](https://gemnasium.com/theodi/office-calendar)
-[![Code Climate](https://codeclimate.com/github/theodi/office-calendar.png)](https://codeclimate.com/github/theodi/office-calendar)
 
 Shows the availability of pods, desks and meeting rooms for members at the ODI offices
  
