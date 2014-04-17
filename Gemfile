@@ -34,7 +34,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :production do 
+group :production do
   gem 'foreman'
   gem 'mysql2'
 end
@@ -42,6 +42,7 @@ end
 group :test do
   gem 'poltergeist'
   gem 'pry'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'webmock'
   gem 'cucumber-rails', :require => false
