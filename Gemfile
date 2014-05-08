@@ -42,6 +42,7 @@ end
 group :test do
   gem 'poltergeist'
   gem 'pry'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'webmock'
   gem 'cucumber-rails', :require => false
