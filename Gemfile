@@ -42,8 +42,7 @@ end
 group :test do
   gem 'poltergeist'
   gem 'pry'
-  gem 'rspec'
-  gem 'rspec-rails'
+  gem 'rspec-expectations'
   gem 'webmock'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner', '<= 1.0.1'
