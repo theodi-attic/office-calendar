@@ -35,7 +35,7 @@ group :assets do
 end
 
 group :production do
-  gem 'foreman'
+  gem 'foreman', "< 0.64.0"
   gem 'mysql2'
 end
 
