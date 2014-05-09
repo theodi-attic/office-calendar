@@ -16,7 +16,7 @@
 
 .DS_Store
 /.env*
-/*privatekey.p12
+*.p12
 
 .idea/
 .generators
@@ -26,4 +26,3 @@
 .vagrant
 
 /coverage/
-certs/development/privatekey.p12
