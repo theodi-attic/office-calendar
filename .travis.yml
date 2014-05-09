@@ -1,0 +1,33 @@
+language: ruby
+rvm:
+- 1.9.3
+before_script: bundle exec rake db:schema:load
+script: bundle exec rake
+after_success:
+- ! '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
+  curl -v -X DELETE -u $GITHUB_USER:$GITHUB_PASSWORD "https://api.github.com/repos/$TRAVIS_REPO_SLUG/git/refs/tags/CURRENT"'
+- ! '[ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] &&
+  curl -v -X POST -d ''{"ref":"refs/tags/CURRENT","sha":"''$TRAVIS_COMMIT''"}''  --header
+  "Content-Type:application/json" -u $GITHUB_USER:$GITHUB_PASSWORD "https://api.github.com/repos/$TRAVIS_REPO_SLUG/git/refs"'
+branches:
+  except:
+  - CURRENT
+notifications:
+  irc:
+    channels:
+    - irc.freenode.net#theodi
+    template:
+    - ! '%{repository} %{branch} - %{message} %{build_url}'
+    on_success: change
+    on_failure: always
+env:
+  global:
+  - GAPPS_PRIVATE_KEY_PATH="certs/test/privatekey.p12"
+  - secure: PoJz7MU8bM7SJlOdAu464ZqVImJtxh0+urUskrgwOUgJVVs+FH+qx5cWO6eokLjEaysyt3ZJY/fIT+Q0fuGGsVuWn8s+VIRw9kIUglIKT2btcS1csuoCqurJKS7PLOF/VrpBerCVJwnPk7PfhP4LKb4NwWI3+Zs8cW78W7+CRVM=
+  - secure: HNqNQZa+j4CGdy0dxO06FchrFJ11m6MzuOcv/uRd1W9LFPMzwpzvqOLb02aoe3Ux1PBnjVqBFcivSdpKzh5KiodrbZYs+sduGn9nL0ZskyjrCBqd5luQ0ikHyXU2I/dyQxBeAV/YKXXu3/KIYt4lFcfarBH5LXY789J3erdjAfw=
+  - secure: ZFlD7btUUZwi8P2CJn9VTJ2xbh0SqwVMjYZLZ2WShZqi7xC/tYNWuW/wmOYNLDZWVDNDqxOCdkejujZfI0o1clCZthCAO0yVntigeuGAQCIMaVtJ3B4RwvdLWOv6+VCjRfJNBXYO+GNYNOtWledhAnD0hLmZSZr8DBSE9/PDu00=
+  - secure: Pq+L0ThOeZzqmDol36Ej6W4JCEjdRkFF4hM5eUKGJPCx869niwtDZD/EEz16tiYVeOH3FokD8kHoAJUW5dknIgpKmKVZrqP3+A0ZrxNHvQrOyh2IHqSmEdw0YQqoar34awQfv4498Q1AtP37f+EMYHokldj6JJq4zLXwxZY6oLc=
+  - secure: Deu2onkgzdw49tDJKX2KObFTBUNXomT1bfjcQZwfLJHGJ86R966RZmGlyd9AniyaoByHKmLAMarrshbxknzlh1cScDV/XT4RfdZbo15mzew6n7vdOs61VdzPl/1gdv92U7XJhZfGzmCKQJbGcolXUBKGl4fAmZuO5z4xvI++E2U=
+  - secure: IVJ50Zc33wyp3CqzmxM8gUstdnCucHlmAx094AtuKBVf+CwKIZfeCL+gPjlNoMM54gFBW1tjDGisElXC39N+tfiOtztxOj2JMcfVxxWJXhBFf1uXhiTlWYP9daArB7E6ZUI4IKwjhJ9LWghMs3R4RpAIy2chTgMeCsBB6Hv7nuw=
+  - secure: WlyD6bL+5FQQo5Kuke/qHEW2Py7EyHVGHiplVCDO82FWs96rV6jqVvai1xZZKWrFb+aq5q1AUaHqsCwaT1ldi8gzqcr7AiB1F5v6JEuI4N/I0dsGvlqe4H9pZ6nas1kHqP8cqEgeJBtvZ+a207iYiwEveNoNCMJFtv7e48tnIiA=
+  - secure: rO/iGHtvmmGp3uaD2RP94p7qpfDKVhzrvILIm0qOXTz7v695huxu59ylIDHJcrVft7dEovJZLAzzebt5KWk7cC26R1JA0qdTjOP4tsBbdem0tfZaSJ5nC41CVLZoSNHDSuk16yrRf1MZyJB9lqg3iCus0p2AYYOgNW1cOdjZD2E=

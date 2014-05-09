@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'dotenv'
 gem 'jquery-rails'
 gem 'fullcalendar-rails', :git => 'git://github.com/theodi/fullcalendar-rails.git'
-gem 'less-rails-bootstrap', :git => 'git://github.com/theodi/less-rails-bootstrap.git'
+gem 'less-rails-bootstrap'
 gem 'icalendar'
 gem 'httparty'
 gem 'nokogiri'
@@ -19,7 +19,6 @@ gem 'google-api-client'
 gem 'redis-rails'
 gem 'jbuilder'
 gem 'friendly_id', '~> 4.0.9'
-gem 'foreman'
 
 gem 'airbrake'
 
@@ -35,7 +34,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :production do 
+group :production do
   gem 'foreman'
   gem 'mysql2'
 end
@@ -43,10 +42,10 @@ end
 group :test do
   gem 'poltergeist'
   gem 'pry'
-  gem 'rspec-rails'
+  gem 'rspec-expectations'
   gem 'webmock'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner', '<= 1.0.1'
   gem 'vcr'
-  gem 'simplecov-rcov'
+  gem 'coveralls'
 end
