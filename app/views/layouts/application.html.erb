@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>ODI Office Calendar</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <%= alternate_auto_discovery_link_tags %>
-		<link href="http://assets.theodi.org/css/odi-bootstrap-pomegranate.css" rel="stylesheet">
 		<%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -23,10 +22,10 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<% get_resources %>
 		</nav>
-		
+
 		<div class="whiteout">
 	      <% if notice %><div class="alert alert-info"><%= notice %></div><% end %>
 	      <% if alert %><div class="alert alert-error"><%= alert %></div><% end %>
